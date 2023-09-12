@@ -1,16 +1,11 @@
-const input = document.getElementById("decToBin")
-const output = document.getElementById("binaryText")
-
-function decimalToBinary(event) {
+function decimalToBinary(num) {
   // Write your code here
-  let num = event.target.value
-  let rem = ""
+  let binary = ""
   while(num>0){
-    rem = num%2 + rem
+    binary = num%2 + binary
     num=Math.floor(num/2)
   }
-  output.innerText = `${rem}`
+  return binary
 }
-input.addEventListener("change",decimalToBinary)
 
-// window.decimalToBinary = decimalToBinary;
+window.decimalToBinary = decimalToBinary;
